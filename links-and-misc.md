@@ -53,15 +53,15 @@ I added some other features and bug fixes, which I put in the original version a
 [https://github.com/nesdoug/famitone2d](https://github.com/nesdoug/famitone2d)
 
 Changes:  
- -added song names to file output  
- -added command line switch -allin prevents removal of unused instruments  
- -added command line switch -Wno suppresses warnings about unsupported effects
+-added song names to file output  
+-added command line switch -allin prevents removal of unused instruments  
+-added command line switch -Wno suppresses warnings about unsupported effects
 
 Bugfixes:  
- -multiple D00 effects \(different channels\) incorrect pattern length  
- -Bxx below D00 effect \(different channels\) incorrect pattern length  
- -Bxx loop back causing wrong instrument inserted at loop point
+-multiple D00 effects \(different channels\) incorrect pattern length  
+-Bxx below D00 effect \(different channels\) incorrect pattern length  
+-Bxx loop back causing wrong instrument inserted at loop point
 
 example of new switches:  
- text2vol filename.txt -ca65 -allin -Wno
+text2vol filename.txt -ca65 -allin -Wno
 

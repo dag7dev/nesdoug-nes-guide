@@ -29,14 +29,14 @@ Why make an NES game today? Why not? You could make a much better game in Game M
 And the NES is in that perfect middle ground for making a game. Earlier, and you have big blocks that don’t look like anything, and one blob of squares is shooting squares at another blob of squares. And you go later \(SNES/Genesis\), and you basically have full color. The best consoles for retro gaming \(my opinion\) are NES, Sega Master System \(or Game Gear\), and Gameboy Color. \[those all have z80 cpu’s and require a different compiler… and a different tutorial\].
 
 Let’s talk about the NES.  
- Released in Japan \(Famicom\), 1983, released in US, 1985. Europe, 1986. Australia, 1987.  
- Re-released in 1993 as a top-loader, without the troublesome lockout chip.  
- Japan had alternative disk drive systems available. FDS.  
- CPU, Ricoh 2A03, 1.79 MHz, is a 6502 \(missing decimal mode\) with audio circuitry
+Released in Japan \(Famicom\), 1983, released in US, 1985. Europe, 1986. Australia, 1987.  
+Re-released in 1993 as a top-loader, without the troublesome lockout chip.  
+Japan had alternative disk drive systems available. FDS.  
+CPU, Ricoh 2A03, 1.79 MHz, is a 6502 \(missing decimal mode\) with audio circuitry
 
 256×240 pixels, can display 25 colors out of 53-ish available.  
- 64 sprites\(8×8 or 8×16\), sprites limited to 8 per horizontal line.  
- 60 fps \(50 fps Europe\)
+64 sprites\(8×8 or 8×16\), sprites limited to 8 per horizontal line.  
+60 fps \(50 fps Europe\)
 
 Here’s the memory map for the CPU
 

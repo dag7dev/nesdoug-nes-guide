@@ -13,8 +13,7 @@ This is **not** my guide. I have **not** written this.
 All rights reserved to: [nesdoug](https://github.com/nesdoug) and his [personal blog](https://nesdoug.com/2018/09/05/introduction/) !
 {% endhint %}
 
-I merely have copied everything and put into gitbook **for my and your convenience**.  
-
+I merely have copied everything and put into gitbook **for my and your convenience**.
 
 I do **not** mantain resources or anything else other than this guide. I won't alter or modify any content of the original blog other than adjust the style of some elements
 
@@ -27,7 +26,7 @@ I am dag7, a programmer interested in many things including programming on old c
 I found nesdoug tutorials excellent and I found gitbook perfect to adapt it.
 
 {% hint style="warning" %}
- Starting from now, me and the author are not responsible for bricked nes systems, dead everdrives, thermonuclear war, or you getting fired because the hello world app failed \(like it did for us...\).
+Starting from now, me and the author are not responsible for bricked nes systems, dead everdrives, thermonuclear war, or you getting fired because the hello world app failed \(like it did for us...\).
 {% endhint %}
 
 {% hint style="danger" %}

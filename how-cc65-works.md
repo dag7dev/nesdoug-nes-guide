@@ -38,22 +38,22 @@ The 6502 processor that runs the NES is an 8 bit system. It doesn’t have an ea
 What this means, is you may want to write your C code very differently, due to the system limitations.
 
 1. Most variables should be defined as unsigned char \(8 bit, assumed to have a value 0-255\).  
- 2. Everything is global \(or static local\)  
- 3. I also try to pass no values\* to functions…
+   1. Everything is global \(or static local\)  
+   2. I also try to pass no values\* to functions…
 
 The main slowdown for C code is moving things back and forth from the C stack. Local variables and passed variables use the C stack, which can be up to 5x slower than a global variable. The alternative to a function argument is to store the values to temporary global variables, just before the function call. This is the kind of thing that could easily cause conflicts, so you might want to immediately put them into static local variables \(which are also fast\) at the top of the function.
 
 \*return values are ok, they are passed via registers
 
-4. Arrays, ideally, should have a max of 256 bytes.  
- 5. Use pointers like arrays. Instead of \*\(ptr + 1\), do ptr\[1\].  
- 6. use ++g instead of g++
+1. Arrays, ideally, should have a max of 256 bytes.  
+   1. Use pointers like arrays. Instead of \*\(ptr + 1\), do ptr\[1\].  
+   2. use ++g instead of g++
 
 cc65 doesn’t optimize very well. It uses “inc g” for ++g, but always uses “lda g, clc, adc \#1, sta g” for the second \(4x longer\).  
 So if you want to do this…  
- `z = g++;` you should instead do…  
-  
- `z = g;`  
+`z = g++;` you should instead do…
+
+`z = g;`  
 `++g;`
 
 When compiling, run cc65 with the -O directive to optimize the code. There are also i,r,s directives, which are sometimes combined as -Oirs, which can add another level of optimization. However, each of these can also introduce bugs \(I haven’t encountered any bugs, so I’m still using all optimizations\).
@@ -66,10 +66,10 @@ Why are we so concerned with optimization? Because timing is very important and 
 
 cc65 can access variables and arrays from asm modules by declaring a variable “extern unsigned char foo;” \(and if it’s a zeropage symbol, add the line \#pragma zpsym \(“foo”\);. When it compiles the C code, it will add an import definition for it. If you have a large binary file…it’s easiest to “incbin” it in the asm code like this…
 
-`'.export _foo  
- _foo:  
- .incbin “foo.bin”`  
-  
+`'.export _foo    
+_foo:    
+.incbin “foo.bin”`
+
 Then to access it from the C code, do this `extern unsigned char foo[];`.  
 Note the underscore. For some reason, when cc65 compiles, it adds an underscore before every symbol. So, on the asm side you have to add an underscore to every exported label/variable.
 
@@ -78,7 +78,7 @@ You can call functions in cc65 written in ASM with a \_\_fastcall\_\_. This will
 It’s also possible to inline asm code into the C code.  
 It would look like this…
 
-`asm (“Z: bit $2002”);  
+`asm (“Z: bit $2002”);    
 asm (“bpl Z”);`
 
 Another note. I’m using the standard nes.lib file that comes with cc65. Other people have been using runtime.lib, which doesn’t work if you get one from a different version of cc65.

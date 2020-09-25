@@ -5,13 +5,13 @@
 This is what you will need to program an NES game…
 
 1. An assembler \(or compiler\)  
- 2. A tile editor  
- 3. Photoshop or GIMP \(or similar\)  
- 4. A text editor, like Notepad++  
- 5. A good NES emulator  
- 6. A tile arranging program  
- 7. python 3 \(optional, but I use it\)  
- 8. a music tracker
+   1. A tile editor  
+   2. Photoshop or GIMP \(or similar\)  
+   3. A text editor, like Notepad++  
+   4. A good NES emulator  
+   5. A tile arranging program  
+   6. python 3 \(optional, but I use it\)  
+   7. a music tracker
 
 ### 6502 Assembler
 
