@@ -1,6 +1,7 @@
 # Table of contents
 
-* [How to Program an NES game in C - Premise](README.md)
+* [README](README.md)
+* [How to program an NES game in C](how-to-program-an-nes-game-in-c.md)
 * [Introduction](introduction.md)
 * [What you need](what-you-need.md)
 * [How cc65 works](how-cc65-works.md)
