@@ -1,5 +1,5 @@
 ---
-description: The purpose to this guide is to illustrate you how to write NES games in C.
+description: The purpose of this guide is to illustrate you how to write NES games in C.
 ---
 
 # How to Program an NES game in C - Premise
